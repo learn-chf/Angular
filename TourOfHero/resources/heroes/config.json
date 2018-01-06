@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "name",
+			"order": 0
+		},
+		"no": {
+			"name": "no",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "no",
+			"order": 1
+		}
+	}
+}

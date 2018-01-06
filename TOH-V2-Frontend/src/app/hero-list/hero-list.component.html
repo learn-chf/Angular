@@ -1,0 +1,28 @@
+<div class="row mt-5 pt-5 animated fadeInLeft" data-wow-delay="0.5s">
+  <table class="table table-hover">
+    <thead class="bg-default">
+      <tr class="text-white">
+        <th>#</th>
+        <th>姓 名</th>
+        <th>删 除</th>
+        <th>查 看</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hero of heroes" >
+        <th scope="row">{{hero.no}}</th>
+        <td>{{hero.name}}</td>
+        <td>
+          <button type="button" class="btn btn-sm btn-danger my-0 waves-light" (click)="delete(hero.id)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+        <td>
+            <a class="btn btn-sm btn-danger my-0 waves-light" routerLink="/hero-detail/{{hero.id}}">
+              <i class="fa fa-eye"></i>
+            </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>  

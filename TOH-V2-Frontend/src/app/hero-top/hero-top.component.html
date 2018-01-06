@@ -1,0 +1,14 @@
+<div class="row mt-5 pt-5 animated fadeInRight" data-wow-delay="0.5s">
+  <div class="card col-5 mt-2 pt-2 mr-2 hoverable" *ngFor="let topHero of topHeroes">
+    <div class="card-header bg-default lighten-1 white-text text-center">
+      顶级英雄-{{topHero.no}}
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{topHero.name}}</h4>
+      <p class="card-text text-truncate">{{topHero.description}}</p>
+      <div class="text-center">
+        <a class="btn btn-deep-orange waves-light" routerLink="/hero-detail/{{topHero.id}}" mdbRippleRadius>查看详情</a>
+      </div>
+    </div>
+  </div>
+</div>    

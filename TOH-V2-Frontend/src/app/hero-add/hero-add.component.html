@@ -1,0 +1,51 @@
+<div [config]="{ show: true }" mdbModal #addHeroModal="mdb-modal" class="modal fade" (onHidden)="goBack()" tabindex="-1" role="dialog">
+  <div class="modal-dialog cascading-modal" role="document">    
+    <div class="modal-content">
+      <div class="modal-header bg-default darken-3 white-text">
+        <h4 class="title">
+          <i class="fa fa-user-plus"></i> 请填写英雄信息</h4>
+        <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="goBack()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body mb-0">
+        <form role="form">
+          <div class="md-form form-sm">
+            <i class="fa fa-sort-numeric-desc prefix"></i>
+            <input mdbActive type="text" id="formNo" class="form-control" #no required>
+            <label for="formNo">编号</label>
+          </div>
+
+          <div class="md-form form-sm">
+            <i class="fa fa-address-card prefix"></i>
+            <input mdbActive type="text" id="formName" class="form-control" #name required>
+            <label for="formName">姓名</label>
+          </div>
+
+          <div class="md-form form-sm">
+            <i class="fa fa-pencil prefix"></i>
+            <textarea mdbActive type="text" id="formdesc" class="md-textarea mb-0" #desc></textarea>
+            <label for="formdesc">简介</label>
+          </div>
+
+          <div class="input-group md-form form-sm">
+            <i class="fa fa-tag prefix"></i>
+            <input type="text" class="form-control text-center" disabled placeholder="顶级英雄？">
+            <span class="input-group-addon">
+              <input type="checkbox" id="checkbox1" #isTop>
+              <label for="checkbox1"></label>
+            </span>
+          </div>
+          <div class="text-center mt-1-half">
+            <button type="submit" class="btn btn-deep-orange mb-2 waves-light" mdbRippleRadius (click)="add(no.value,name.value,desc.value,isTop.checked);addHeroModal.hide();no.value='';name.value='';desc.value='';isTop.checked=false">
+              添 加
+              <i class="fa fa-send ml-1"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Modal: Add Hero form-->       
+     

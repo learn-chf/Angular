@@ -1,0 +1,45 @@
+
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-default scrolling-navbar" [containerInside]="false">
+  <logo>
+    <a class="logo navbar-brand" href="#">
+      <i class="fa fa-child"></i>
+      <strong>{{title}}</strong>
+    </a>
+  </logo>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link" routerLink="/hero-list">所有英雄</a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link" routerLink="/hero-top">顶级英雄</a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link" routerLink="/hero-add">添加一个英雄？</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav-flex-icons">
+    <li class="nav-item waves-light" mdbRippleRadius>
+      <a class="nav-link">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li class="nav-item waves-light" mdbRippleRadius>
+      <a class="nav-link">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li class="nav-item waves-light" mdbRippleRadius>
+      <a class="nav-link">
+        <i class="fa fa-instagram"></i>
+      </a>
+    </li>
+    </ul>
+  </links>
+</mdb-navbar>
+<main>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+

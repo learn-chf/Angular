@@ -3,14 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
-  // hero: Hero = {
-  //   id: 1,
-  //   name: 'Windstorm'
-  // };
-
+  title = 'TOH-英雄之旅';
 }
-
